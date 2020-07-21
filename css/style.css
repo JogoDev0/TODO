@@ -4,24 +4,83 @@
     box-sizing: border-box;
 }
 
-#header {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+body {
+    background-color: turquoise;
 }
 
-#header #inputPrioridad {
+.wrapper {
+    max-width: 960px;
+    height: 100vh;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    border: 5px solid black;
+    border-radius: 1%;
+    background-color: floralwhite;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 3px solid black;
+}
+
+header form {
+    padding: 20px;
+    border-bottom: 3px solid black;
+}
+
+#button {
+    width: 150px;
+    margin: 0 auto;
+}
+
+header #inputPrioridad {
     margin: 20px 0;
 }
 
-#main {
-    min-height: 200px;
+footer {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    border-top: 3px solid black;
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
+main {
+    background-color: black;
     width: 100%;
+    margin: 0 auto;
+    color: white;
+}
+
+main section article {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+
+main section article .tarea {
+    padding: 20px;
+    text-align: left;
+}
+
+main section article .eliminar {
+    width: 15%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: tomato;
+    color: black;
+    border: 2px solid tomato;
+    border-radius: 5%;
+    transition: 0.5s;
+}
+
+main section article .eliminar:hover {
+    width: 20%;
+    font-size: 150%;
+    background-color: red;
 }

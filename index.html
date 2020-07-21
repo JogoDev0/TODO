@@ -6,33 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO´s</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <script src="js/moledo.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
+    <script src="js/moledo.js"></script>
 
 </head>
 
 <body>
 
-    <div class="container-lg">
+    <div class="wrapper">
 
-        <header id="header" class="bg-info">
+        <header class="bg-info">
             <form>
                 <div class="form-row align-items-center">
-                    <div class="col-12 col-md-5">
-                        <label class="sr-only" for="inputTarea"></label>
+                    <div class="col-12 col-md-6">
+                        <!-- <label for="inputTarea"></label> -->
                         <input type="text" class="form-control" id="inputTarea" placeholder="Introduce una tarea">
                     </div>
 
-                    <div class="col-12 col-md-4">
-                        <label class="mr-sm-2 sr-only" for="inputPrioridad"></label>
-                        <select class="custom-select mr-sm-2" id="inputPrioridad">
+                    <div class="col-12 col-md-3">
+                        <!-- <label for="inputPrioridad"></label> -->
+                        <select class="custom-select" id="inputPrioridad">
                             <option selected>Selecciona una prioridad</option>
                             <option value="urgente">Urgente</option>
                             <option value="diaria">Diaria</option>
@@ -42,22 +39,68 @@
                     </div>
 
                     <div class="col-12 col-md-3">
-                        <button type="submit" class="btn btn-dark btn-block">Guardar</button>
+                        <button id="button" type="submit" class="btn btn-dark btn-block">Guardar</button>
                     </div>
                 </div>
             </form>
+            <form>
+                <div class="form row align-items-center">
+                    <div class="col-12 col-md-5">
+                        <!-- <label class="mr-sm-2 sr-only" for="buscadorPrioridad"></label> -->
+                        <select class="custom-select" id="buscadorPrioridad">
+                            <option selected>Selecciona una prioridad a filtrar</option>
+                            <option value="urgente">Urgente</option>
+                            <option value="diaria">Diaria</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="mensual">Mensual</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-7">
+                        <!-- <label class="sr-only" for="buscadorTarea"></label> -->
+                        <input type="text" class="form-control" id="buscadorTarea"
+                            placeholder="Introduce texto para filtrar tareas">
+                    </div>
+                </div>
+            </form>
+
         </header>
 
-        <main id="main">
+        <main>
 
+            <section>
+                <article>
+                    <div class="tarea">listaTareas.titulo</div>
+                    <div class="eliminar"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z" />
+                        </svg></div>
+                </article>
+                <article>
+                    <div class="tarea">listaTareas.titulo</div>
+                    <div class="eliminar"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z" />
+                        </svg></div>
+                </article>
+                <article>
+                    <div class="tarea">listaTareas.titulo</div>
+                    <div class="eliminar"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z" />
+                        </svg></div>
+                </article>
+            </section>
 
         </main>
 
-        <footer id="footer" class="container-lg bg-info">
-            <div class="col-12">
-                <h1>APP TODO´s de JON</h1>
+        <footer class="bg-info">
+            <div>
+                <h1>TODO´s de Jon</h1>
             </div>
-
         </footer>
 
 
