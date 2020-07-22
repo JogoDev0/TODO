@@ -16,7 +16,7 @@ body {
     position: relative;
     border: 5px solid black;
     border-radius: 1%;
-    background-color: floralwhite;
+    background-color: black;
 }
 
 header {
@@ -46,6 +46,7 @@ footer {
     bottom: 0;
     left: auto;
     border-top: 3px solid black;
+    color: whitesmoke;
 }
 
 main {
@@ -77,6 +78,7 @@ main section article .eliminar {
     border: 2px solid tomato;
     border-radius: 5%;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 main section article .eliminar:hover {
