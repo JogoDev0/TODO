@@ -1,7 +1,3 @@
-let sectionTareas = document.querySelector('main section');
-
-
-
 function registrarTarea(pListaTareas, pId, pTitulo, pPrioridad) {
 
     let newTarea = {
@@ -22,30 +18,6 @@ function registrarTarea(pListaTareas, pId, pTitulo, pPrioridad) {
         alert('La tarea ya existe');
     }
 }
-
-function pintarListatareas(pListaTareas) {
-    sectionTareas.innerHTML = '';
-
-    for (const tarea of pListaTareas) {
-        pintarTarea(tarea.id, tarea.titulo, tarea.prioridad)
-    }
-}
-
-function pintarTarea(pId, pTitulo, pPrioridad) {
-    sectionTareas.innerHTML += `<article data-id="${pId}" class="${pPrioridad}">
-                        <div class="tarea">${pTitulo}</div>
-                        <div class="prioridad">${pPrioridad}</div>
-                        <div class="eliminar">
-                            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z" />
-                            </svg>
-                        </div>
-                    </article>`;
-
-}
-
 
 function esTareaUnica(pListaTareas, pNewTarea) {
     let esUnica = true;
@@ -68,4 +40,26 @@ function esTareaUnica(pListaTareas, pNewTarea) {
     return esUnica;
 }
 
-pintarListatareas(listaTareas);
+function deleteArray(pListaTareas, pId) {
+    let posicionBorrar = pListaTareas.findIndex(pTarea => parseInt(pTarea.id) == pId);
+
+    pListaTareas.splice(posicionBorrar, 1);
+}
+
+function filtrarPorPrioridad(pListatareas, pPrioridad) {
+
+    if (pPrioridad == 'notSelected') {
+        return pListatareas;
+    } else {
+        let listaFiltrada = pListatareas.filter(pTarea => pTarea.prioridad.toLowerCase() == pPrioridad.toLowerCase());
+
+        return listaFiltrada;
+    }
+
+}
+
+function filtrarPorTitulo(pListatareas, pTitulo) {
+    let listaFiltrada = pListatareas.filter(pTarea => pTarea.titulo.toLowerCase().includes(pTitulo.toLowerCase()));
+
+    return listaFiltrada;
+}
