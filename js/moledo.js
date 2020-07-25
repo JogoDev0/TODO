@@ -19,4 +19,5 @@ let listaTareas = new Array(
         titulo: 'Planchar',
         prioridad: 'mensual',
     },
+
 );

@@ -1,100 +1,5 @@
-/* * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-} */
-
-body {
-    background-color: turquoise;
-}
-
-.wrapper {
-    max-width: 960px;
-    min-height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 5px solid black;
-    border-radius: 1%;
-    background-color: black;
-}
-
-header {
-    width: 100%;
-    margin: 0 auto;
-    border-bottom: 3px solid black;
-}
-
-header form {
-    padding: 20px;
-    border-bottom: 3px solid black;
-}
-
-#button {
-    width: 150px;
-    margin: 0 auto;
-}
-
-header #inputPrioridad {
-    margin: 20px 0;
-}
-
-footer {
-    width: 100%;
-    text-align: center;
-    left: auto;
-    border-top: 3px solid black;
-    border-radius: 10px;
-    color: whitesmoke;
-}
-
 main {
-    background-color: black;
-    width: 100%;
-    margin: 0 auto;
-    color: black;
-}
-
-main section article {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 5px 5px 5px 0;
-    margin-bottom: 5px;
-    border-radius: 10px;
-}
-
-main section article .tarea {
-    width: 65%;
-    padding: 30px;
-    text-align: left;
-}
-
-main section article .prioridad {
-    padding: 30px 0;
-    text-align: center;
-    border: 1px solid black;
-    width: 20%;
-    margin-right: 10px;
-}
-
-main section article .eliminar {
-    width: 15%;
-    padding: 20px 0;
-    text-align: center;
-    background-color: crimson;
-    color: black;
-    border: 2px solid crimson;
-    border-radius: 5%;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-main section article .eliminar:hover {
-    width: 20%;
-    font-size: 150%;
-    background-color: crimson;
+    min-height: 80vh;
 }
 
 main .urgente {
@@ -111,4 +16,20 @@ main .semanal {
 
 main .mensual {
     background-color: #98FB98;
+}
+
+main section article .prioridad {
+    width: 20%;
+}
+
+main section article .eliminar {
+    color: black;
+    border-radius: 5%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+main section article .eliminar:hover {
+    font-size: 150%;
+    color: crimson;
 }
