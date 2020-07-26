@@ -71,7 +71,8 @@ function selccionarPrioridad(event) {
 
 function seleccionarTarea(event) {
     let titulo = event.target.value;
-    let listaFiltrada = filtrarPorTitulo(LISTA, titulo);
+    let prioridad = selectPrioridad.value;
+    let listaFiltrada = filtrarPorTitulo(LISTA, titulo, prioridad);
     pintarListatareas(listaFiltrada);
 }
 

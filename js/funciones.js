@@ -58,8 +58,9 @@ function filtrarPorPrioridad(pListatareas, pPrioridad) {
 
 }
 
-function filtrarPorTitulo(pListatareas, pTitulo) {
-    let listaFiltrada = pListatareas.filter(pTarea => pTarea.titulo.toLowerCase().includes(pTitulo.toLowerCase()));
+function filtrarPorTitulo(pListatareas, pTitulo, pPrioridad) {
+    let listaFiltradaPrioridad = filtrarPorPrioridad(pListatareas, pPrioridad)
+    listaFiltradaTitulo = listaFiltradaPrioridad.filter(pTarea => pTarea.titulo.toLowerCase().includes(pTitulo.toLowerCase()));
 
-    return listaFiltrada;
+    return listaFiltradaTitulo;
 }
